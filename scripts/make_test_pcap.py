@@ -33,12 +33,29 @@ def epb(iface, tsec_us, data):
     blk += struct.pack('<I', len(blk) + 4)
     return blk
 
-def usbpcap(irp, status, function, info, bus, dev, ep, tr, data=b'', setup=None):
-    if setup is not None:
-        data = setup + data
-    hdr = struct.pack('<HQIHBHHBBI', 27, irp, status, function, info,
-                      bus, dev, ep, tr, len(data))
+def usbpcap(irp, status, function, info, bus, dev, ep, tr, data=b'', setup=None, stage=None):
+    """Генерация пакета USBPcap. Для control-передач stage обязателен
+    (реальный USBPcap использует hdr_len=28 + байт стадии)."""
+    if tr == 2:
+        if stage is None:
+            raise ValueError('control-пакет требует stage')
+        if setup is not None:
+            data = setup + data
+        hdr = struct.pack('<HQIHBHHBBIB', 28, irp, status, function, info,
+                          bus, dev, ep, tr, len(data), stage)
+    else:
+        hdr = struct.pack('<HQIHBHHBBI', 27, irp, status, function, info,
+                          bus, dev, ep, tr, len(data))
     return hdr + data
+
+def ctl_in(irp, bus, dev, setup, data, status=0):
+    """Полная control IN-передача: SETUP (запрос) + DATA (данные) + STATUS."""
+    pkts = [
+        usbpcap(irp, status, 0x0008, 0x00, bus, dev, 0x00, 2, data=setup, stage=0),
+        usbpcap(irp, status, 0x0008, 0x01, bus, dev, 0x80, 2, data=data, stage=1),
+        usbpcap(irp, status, 0x0008, 0x00, bus, dev, 0x00, 2, data=b'', stage=2),
+    ]
+    return pkts
 
 F_CTRL, F_BULK = 0x0008, 0x0009
 T_CTRL, T_BULK = 2, 3
@@ -48,12 +65,12 @@ def main():
     t = 1_000_000  # 1.0 c
     irp = 0x1000
 
-    # 1. GET_DESCRIPTOR(DEVICE) — ответ устройства (IN, complete)
+    # 1. GET_DESCRIPTOR(DEVICE) — SETUP + DATA + STATUS
     devdesc = bytes([0x12, 0x01, 0x00, 0x02, 0xFF, 0x00, 0x00, 0x40,
                      0xA2, 0x20, 0x01, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01])
-    setup = bytes([0x80, 0x06, 0x00, 0x01, 0x09, 0x04, 0x12, 0x00])  # GET_DESCRIPTOR(DEVICE): wValue=0x0100 LE, wIndex=0x0409, wLength=18
-    out += epb(0, t, usbpcap(irp, 0, F_CTRL, 0x01, 1, 7, 0x00, T_CTRL,
-                             data=devdesc, setup=setup))
+    setup = bytes([0x80, 0x06, 0x00, 0x01, 0x09, 0x04, 0x12, 0x00])  # GET_DESCRIPTOR(DEVICE)
+    for p in ctl_in(irp, 1, 7, setup, devdesc):
+        out += epb(0, t, p)
     irp += 1
 
     # 2. GET_DESCRIPTOR(STRING idx=1) — серийный номер "A111788"
@@ -61,8 +78,8 @@ def main():
     sdata = struct.pack('<BB', 2 + 2 * len(serial), 3) + serial.encode('utf-16-le')
     setup = bytes([0x80, 0x06, 0x01, 0x03, 0x09, 0x04, len(sdata), 0x00])  # GET_DESCRIPTOR(STRING idx=1): wValue=0x0301 LE
     t += 50_000
-    out += epb(0, t, usbpcap(irp, 0, F_CTRL, 0x01, 1, 7, 0x00, T_CTRL,
-                             data=sdata, setup=setup))
+    for p in ctl_in(irp, 1, 7, setup, sdata):
+        out += epb(0, t, p)
     irp += 1
 
     # 3. bulk OUT: 0x83 INFO (запрос)
