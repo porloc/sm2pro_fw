@@ -26,7 +26,13 @@ import struct
 import sys
 
 LINKTYPE_USBPCAP = 249
-USBPCAP_HDR_LEN = 27
+
+USBPCAP_HDR_LEN = 27          # базовый заголовок
+USBPCAP_HDR_LEN_CTRL = 28     # control-передачи: +1 байт «стадия»
+
+# стадии control-передачи USBPcap: 0=setup, 1=data, 2=status, 3=complete
+# (3 — «восстановленные» пакеты уже подключённых устройств в начале записи)
+STAGE_NAMES = {0: 'SETUP', 1: 'DATA', 2: 'STATUS', 3: 'COMPLETE'}
 
 TR_ISOC, TR_INTR, TR_CTRL, TR_BULK = 0, 1, 2, 3
 TR_NAMES = {TR_ISOC: 'ISOC', TR_INTR: 'INTR', TR_CTRL: 'CTL ', TR_BULK: 'BULK'}
@@ -158,10 +164,10 @@ def read_pcap(data):
 # ----------------------------------------------------------------------------
 
 def parse_usbpcap(pkt):
-    if len(pkt) < USBPCAP_HDR_LEN:
+    if len(pkt) < 2:
         return None
     hdr_len = struct.unpack_from('<H', pkt, 0)[0]
-    if hdr_len < USBPCAP_HDR_LEN:
+    if hdr_len < USBPCAP_HDR_LEN or hdr_len > len(pkt):
         return None
     irp_id = struct.unpack_from('<Q', pkt, 2)[0]
     status = struct.unpack_from('<I', pkt, 10)[0]
@@ -171,13 +177,18 @@ def parse_usbpcap(pkt):
     ep = pkt[21]
     tr = pkt[22]
     dlen = struct.unpack_from('<I', pkt, 23)[0]
-    payload = pkt[USBPCAP_HDR_LEN:USBPCAP_HDR_LEN + dlen]
+    stage = None
+    if tr == TR_CTRL and hdr_len >= USBPCAP_HDR_LEN_CTRL:
+        stage = pkt[27]                      # байт стадии control-передачи
+    payload = pkt[hdr_len:hdr_len + dlen]
     setup = None
-    if tr == TR_CTRL and len(payload) >= 8:
+    # setup-пакет живой control-передачи: payload начинается с 8 байт SETUP
+    if tr == TR_CTRL and stage == 0 and len(payload) >= 8:
         setup, payload = payload[:8], payload[8:]
     return {
         'irp': irp_id, 'status': status, 'function': function, 'info': info,
         'bus': bus, 'dev': dev, 'ep': ep, 'tr': tr, 'dlen': dlen,
+        'stage': stage, 'hdr_len': hdr_len,
         'payload': payload, 'setup': setup,
     }
 
@@ -254,14 +265,18 @@ def analyze(packets, out, dev_filter=None, bulk_only=False, pause=0.1):
 
         # --- control-передачи (перечисление и т.п.) ---
         if u['tr'] == TR_CTRL:
+            stage = u['stage']
+            stage_s = STAGE_NAMES.get(stage, str(stage)) if stage is not None else ''
             if u['dlen'] == 0:
-                if not bulk_only and u['setup'] is None:
-                    out.write('%s CTL    bus=%d dev=%d (status)\n' % (hdr, u['bus'], u['dev']))
+                if not bulk_only and stage_s:
+                    out.write('%s CTL %s bus=%d dev=%d (%s)\n'
+                              % (hdr, 'D→H' if (u['info'] & INFO_IN) else 'H→D',
+                                 u['bus'], u['dev'], stage_s))
                 continue
             if u['setup'] is not None:
                 rt, rq, wv, wi, wl, name = setup_str(u['setup'])
                 direction = 'D→H' if (rt & 0x80) else 'H→D'
-                line = '%s CTL %s bus=%d dev=%d %s' % (hdr, direction, u['bus'], u['dev'], name)
+                line = '%s CTL %s bus=%d dev=%d %s %s' % (hdr, direction, u['bus'], u['dev'], stage_s, name)
                 data = u['payload']
                 # расшифровка дескрипторов
                 key = (u['bus'], u['dev'])
@@ -290,6 +305,40 @@ def analyze(packets, out, dev_filter=None, bulk_only=False, pause=0.1):
                 events.append({'i': idx, 't': rel, 'kind': 'ctrl',
                                'bus': u['bus'], 'dev': u['dev'],
                                'req': name, 'dir': direction,
+                               'data': data.hex()})
+            else:
+                # data-стадия / псевдо-пакеты (stage 1/3) без setup
+                data = u['payload']
+                direction = 'D→H' if (u['info'] & INFO_IN) else 'H→D'
+                line = '%s CTL %s bus=%d dev=%d %s данные %d байт' % (
+                    hdr, direction, u['bus'], u['dev'], stage_s, len(data))
+                # расшифровка дескрипторов в данных
+                key = (u['bus'], u['dev'])
+                if len(data) >= 18 and data[0] == 0x12 and data[1] == 0x01:
+                    vid, pid = struct.unpack_from('<HH', data, 8)
+                    d = devices.setdefault(key, {})
+                    d['vid'], d['pid'] = '0x%04X' % vid, '0x%04X' % pid
+                    line += ' → ДЕСКРИПТОР УСТРОЙСТВА VID=%s PID=%s class=%02X iSerial=%d' % (
+                        d['vid'], d['pid'], data[4], data[16])
+                elif len(data) >= 4 and data[0] == 0x09 and data[1] == 0x02:
+                    wtot = struct.unpack_from('<H', data, 2)[0]
+                    line += ' → ДЕСКРИПТОР КОНФИГУРАЦИИ (%d байт, интерфейсов=%d)' % (
+                        wtot, data[4])
+                elif len(data) >= 2 and data[1] == 3 and data[0] == len(data):
+                    try:
+                        s = data[2:data[0]].decode('utf-16-le')
+                        d = devices.setdefault(key, {})
+                        d.setdefault('strings', []).append(s)
+                        line += ' → STRING «%s»' % s
+                    except Exception:
+                        pass
+                out.write(line + '\n')
+                if data and not bulk_only:
+                    for ln in hexdump(data):
+                        out.write(ln + '\n')
+                events.append({'i': idx, 't': rel, 'kind': 'ctrl',
+                               'bus': u['bus'], 'dev': u['dev'],
+                               'req': 'data:%s' % stage_s, 'dir': direction,
                                'data': data.hex()})
             stats['other'] += 1
             continue
@@ -333,9 +382,10 @@ def analyze(packets, out, dev_filter=None, bulk_only=False, pause=0.1):
     out.write('=' * 78 + '\nИТОГИ\n')
     for key in sorted(devices):
         d = devices[key]
-        out.write('  устройство bus=%d dev=%d: VID=%s PID=%s serial=%s\n'
+        out.write('  устройство bus=%d dev=%d: VID=%s PID=%s serial=%s%s\n'
                   % (key[0], key[1], d.get('vid', '?'), d.get('pid', '?'),
-                     d.get('serial', '?')))
+                     d.get('serial', '?'),
+                     (' strings=%s' % d['strings']) if d.get('strings') else ''))
     out.write('  хост→устройство : %d пакетов, %d байт\n' % (stats['h2d'], stats['h2d_bytes']))
     out.write('  устройство→хост : %d пакетов, %d байт\n' % (stats['d2h'], stats['d2h_bytes']))
     if opcode_hist:
