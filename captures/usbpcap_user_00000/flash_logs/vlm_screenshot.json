@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# Подробное описание скриншота\n\n## Общая картина\nОткрыто окно **«Диспетчер устройств»** (Windows 10, светлая тема) и поверх него — окно свойств устройства **«Свойства: Scanmatik USB-NDIS #3»**.\n\n## 1) Дерево устройств (весь видимый текст)\n\nМеню: **Файл | Действие | Вид | Справка**\n\n- Мыши и иные указывающие устройства (свернуто)\n- Объекты обработки звука (APO) (свернуто)\n- Очереди печати (свернуто)\n- Порты (COM и LPT) (свернуто)\n- Программные устройства (свернуто)\n- Процессоры (свернуто)\n- **Сетевые адаптеры** (развернуто):\n  - Bluetooth Device (Personal Area Network)\n  - Intel(R) Wi-Fi 6 AX200 160MHz\n  - Kerio Virtual Network Adapter\n  - **Scanmatik USB-NDIS #3** ← выбранное устройство\n  - VMware Virtual Ethernet Adapter for VMnet1\n  - VMware Virtual Ethernet Adapter for VMnet8\n  - VPN Client Adapter - VPN\n  - WAN Miniport (IKEv2)\n  - WAN Miniport (IP)\n  - WAN Miniport (IPv6)\n  - WAN Miniport (L2TP)\n  - WAN Miniport (Network Monitor)\n  - WAN Miniport (PPPOE)\n  - WAN Miniport (PPTP)\n  - WAN Miniport (SSTP)\n- Системные устройства (свернуто)\n- Устройства HID (Human Interface Devices) (свернуто)\n- Устройства безопасности (свернуто)\n\nРаздел «Контроллеры USB» / «Другие устройства» в кадр **не попали** (дерево обрезано по ширине и низу).\n\n## 2) Проблемные устройства\n**Ни одного устройства с жёлтым восклицательным знаком или крестиком не видно** — все значки адаптеров штатные. Устройство Scanmatik USB-NDIS #3 работает нормально.\n\n## 3) Окно свойств «Scanmatik USB-NDIS #3»\n\nВкладки (слева направо): **Общие** (активна) | **Драйвер** | **Сведения** | **События** | **Управление электропитанием**\n\nСодержимое вкладки «Общие»:\n- Значок устройства, название: **Scanmatik USB-NDIS #3**\n- **Тип устройства:** Сетевые адаптеры\n- **Изготовитель:** SCANMATIK EUROPE SL\n- **Размещение:** Port_#0002.Hub_#0001\n- **Состояние устройства:** «Устройство работает нормально.»\n- Кнопки: **OK**, **Отмена**\n\n## 4) VID/PID\nНа скриншоте **не отображаются** — вкладка «Сведения» не открыта, поэтому ID оборудования (VID/PID) увидеть нельзя. Видно только размещение: Port_#0002.Hub_#0001.\n\n## Вывод\nДиагностический адаптер **Scanmatik II/3** подключён по USB и корректно определился как сетевой адаптер (USB-NDIS/RNDIS), драйвер работает без ошибок.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1795056200,
+  "id": "202611191043053a5596bdd7b449cc",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611191043053a5596bdd7b449cc",
+  "usage": {
+    "completion_tokens": 753,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1074,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1827
+  }
+}

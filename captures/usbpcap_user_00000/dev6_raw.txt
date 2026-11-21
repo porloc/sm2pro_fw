@@ -1,0 +1,11 @@
+#1 t=   0.0000 fn=0x000B info=0x00 ep=0x80 tr=CTL  dlen=8 status=0x00000000 irp=0x0
+#2 t=   0.0000 fn=0x0008 info=0x01 ep=0x80 tr=CTL  dlen=18 status=0x00000000 irp=0x0
+      0000  40 A2 20 01 00 00 01 00 00 00  |@. .......|
+#3 t=   0.0000 fn=0x000B info=0x00 ep=0x80 tr=CTL  dlen=8 status=0x00000000 irp=0x0
+#4 t=   0.0000 fn=0x0008 info=0x01 ep=0x80 tr=CTL  dlen=32 status=0x00000000 irp=0x0
+      0000  C0 32 09 04 00 00 02 FF 00 00 00 07 05 81 02 40  |.2.............@|
+      0010  00 00 07 05 02 02 40 00  |......@.|
+#5 t=   0.0000 fn=0x0000 info=0x00 ep=0x00 tr=CTL  dlen=8 status=0x00000000 irp=0x0
+#6 t=   0.0000 fn=0x0000 info=0x01 ep=0x00 tr=CTL  dlen=0 status=0x00000000 irp=0x0
+
+ИТОГО dev=6: 6 пакетов

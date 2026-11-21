@@ -1,0 +1,77 @@
+===== screenshot_authbypass.bin [AUTHBYPASS]: 43 вызовов
+[  0] t=      0.0ms CreateFileW      site=0x67 ret=1
+        open('\.\SmUsb000')
+[  1] t=      0.0ms DeviceIoControl  site=0x1b1 ret=1
+        buf@0x012FEBE0(320B) @0xa9: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 6C 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 01 00 00 00…
+[  2] t=      0.0ms DeviceIoControl  site=0x71 ret=1
+        buf@0x012FDD08(8B) @0x12a: 86 04 00 DF 00 5E 72 77   <-- CMD 0x86 86
+[  3] t=      0.0ms DeviceIoControl  site=0x71 ret=1
+        buf@0x012FDD08(8B) @0x12a: 00 04 00 59 00 5E 72 77   <-- RESP status=04 len=0x00
+[  4] t=      1.0ms DeviceIoControl  site=0x71 ret=1
+        buf@0x01501150(4B) @0x12a: 83 00 00 D8   <-- CMD 0x83 INFO
+[  5] t=      1.0ms DeviceIoControl  site=0x71 ret=1
+        buf@0x015021EE(22B) @0x12a: 00 12 00 67 88 17 11 0A 00 00 00 00 00 00 00 00 98 11 00 00 02 03   <-- RESP status=12 len=0x00
+[  6] t=      1.0ms DeviceIoControl  site=0x71 ret=1
+        buf@0x01501150(4B) @0x12a: 88 00 00 DD   <-- CMD 0x88 ARM
+[  7] t=      1.0ms DeviceIoControl  site=0x71 ret=1
+        buf@0x015021EE(4B) @0x12a: 00 00 00 55   <-- RESP status=00 len=0x00
+[  8] t=      1.0ms DeviceIoControl  site=0x71 ret=1
+        buf@0x01501150(16B) @0x12a: 37 0C 00 98 98 11 00 00 13 9A 0E 21 3C 35 01 00   <-- CMD 0x37 LAUNCH
+[  9] t=      1.0ms DeviceIoControl  site=0x71 ret=1
+        buf@0x015021EE(4B) @0x12a: 00 00 00 55   <-- RESP status=00 len=0x00
+[ 10] t=     24.7ms DeviceIoControl  site=0x71 ret=1
+        buf@0x01501150(176B) @0x12a: 12 AC 00 13 36 66 6F 0D D6 37 7B 6B D5 B8 D9 5B EC 82 7F 06 20 C2 1F 1E 61 06 70 B3 6B 35 80 9B 5A 6F B3 03 D0 31 BF 07 E1 7B 6B 00 E0 3D 4E D8 A5 CC 37 AC 6E D9 5B 03 F4 AB F5 0F 16 CD DE 1A…   <-- CMD 0x12 AUTH
+[ 11] t=     24.7ms DeviceIoControl  site=0x71 ret=1
+        buf@0x015021EE(64B) @0x12a: 00 34 01 8A 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 E0 3D 4E D8 A5 CC 37 AC 00 00 00 00 00 00 00 00 00 00 00 00   <-- RESP status=34 len=0x01
+[ 12] t=     25.7ms DeviceIoControl  site=0x71 ret=1
+        buf@0x0150222E(248B) @0x12a: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 88 17 11 0A 00 3B C4 58 24 65 56 A3 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00…
+[ 13] t=    643.6ms CloseHandle      site=0x9 ret=0 err=6
+[ 14] t=  72565.2ms CreateFileW      site=0x67 ret=0 err=2
+        open('\.\SmUsb000')
+[ 15] t=  72565.2ms CreateFileW      site=0x67 ret=0 err=2
+        open('\.\SmUsb001')
+[ 16] t=  72565.2ms CreateFileW      site=0x67 ret=0 err=2
+        open('\.\SmUsb002')
+[ 17] t=  72565.2ms CreateFileW      site=0x67 ret=0 err=2
+        open('\.\SmUsb003')
+[ 18] t=  72565.2ms CreateFileW      site=0x67 ret=0 err=2
+        open('\.\SmUsb004')
+[ 19] t=  72565.2ms CreateFileW      site=0x67 ret=0 err=2
+        open('\.\SmUsb005')
+[ 20] t=  72565.2ms CreateFileW      site=0x67 ret=0 err=2
+        open('\.\SmUsb006')
+[ 21] t=  72565.2ms CreateFileW      site=0x67 ret=0 err=2
+        open('\.\SmUsb007')
+[ 22] t=  72565.2ms CreateFileW      site=0x67 ret=0 err=2
+        open('\.\SmUsb008')
+[ 23] t=  72565.2ms CreateFileW      site=0x67 ret=0 err=2
+        open('\.\SmUsb009')
+[ 24] t=  72565.2ms CreateFileW      site=0x7b ret=0 err=2
+        open('\.\SmUsb_PID_0002_000')
+[ 25] t=  72565.2ms CreateFileW      site=0x7b ret=0 err=2
+        open('\.\SmUsb_PID_0002_001')
+[ 26] t=  72565.2ms CreateFileW      site=0x7b ret=0 err=2
+        open('\.\SmUsb_PID_0002_002')
+[ 27] t=  72565.2ms CreateFileW      site=0x7b ret=0 err=2
+        open('\.\SmUsb_PID_0002_003')
+[ 28] t=  72565.2ms CreateFileW      site=0x7b ret=0 err=2
+        open('\.\SmUsb_PID_0002_004')
+[ 29] t=  72565.2ms CreateFileW      site=0x7b ret=0 err=2
+        open('\.\SmUsb_PID_0002_005')
+[ 30] t=  72566.2ms CreateFileW      site=0x7b ret=0 err=2
+        open('\.\SmUsb_PID_0002_006')
+[ 31] t=  72566.2ms CreateFileW      site=0x7b ret=0 err=2
+        open('\.\SmUsb_PID_0002_007')
+[ 32] t=  72566.2ms CreateFileW      site=0x7b ret=0 err=2
+        open('\.\SmUsb_PID_0002_008')
+[ 33] t=  72566.2ms CreateFileW      site=0x7b ret=0 err=2
+        open('\.\SmUsb_PID_0002_009')
+[ 34] t=  72566.2ms CloseHandle      site=0x9 ret=1
+[ 35] t=  72566.2ms CloseHandle      site=0x9 ret=1
+[ 36] t=  72566.2ms CloseHandle      site=0x9 ret=1
+[ 37] t=  72566.2ms CloseHandle      site=0x9 ret=1
+[ 38] t=  74391.0ms CloseHandle      site=0x9 ret=1
+[ 39] t=  74391.0ms CloseHandle      site=0x9 ret=1
+[ 40] t=  74391.0ms CloseHandle      site=0x9 ret=1
+[ 41] t=  74391.0ms CloseHandle      site=0x9 ret=1
+[ 42] t=  74391.0ms CloseHandle      site=0x9 ret=1

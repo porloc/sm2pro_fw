@@ -1,0 +1,885 @@
+=== Сайт 0x0800C15E (пул 0x0800C520) ===
+  0x0800C10E: 0000       movs      r0, r0
+  0x0800C110: 0000       movs      r0, r0
+  0x0800C112: 0000       movs      r0, r0
+  0x0800C114: 617e       ldrb      r1, [r4, #0x19]
+  0x0800C116: 0008       lsrs      r0, r0, #0x20
+  0x0800C118: 3700       movs      r7, r6
+  0x0800C11A: 0000       movs      r0, r0
+  0x0800C11C: 0000       movs      r0, r0
+  0x0800C11E: 0000       movs      r0, r0
+  0x0800C120: 5d7f       ldrb      r5, [r3, #0x1d]
+  0x0800C122: 0008       lsrs      r0, r0, #0x20
+  0x0800C124: 0000       movs      r0, r0
+  0x0800C126: 0000       movs      r0, r0
+  0x0800C128: 0000       movs      r0, r0
+  0x0800C12A: 0000       movs      r0, r0
+  0x0800C12C: 0000       movs      r0, r0
+  0x0800C12E: 0000       movs      r0, r0
+  0x0800C130: 0100       movs      r1, r0
+  0x0800C132: 0000       movs      r0, r0
+  0x0800C134: 0000       movs      r0, r0
+  0x0800C136: 0000       movs      r0, r0
+  0x0800C138: 2c01       lsls      r4, r5, #4
+  0x0800C13A: 0000       movs      r0, r0
+  0x0800C13C: 0200       movs      r2, r0
+  0x0800C13E: 0000       movs      r0, r0
+  0x0800C140: 4c04       lsls      r4, r1, #0x11
+  0x0800C142: 0000       movs      r0, r0
+  0x0800C144: 2c01       lsls      r4, r5, #4
+  0x0800C146: 0000       movs      r0, r0
+  0x0800C148: 0048       ldr       r0, [pc, #0]
+  0x0800C14A: 7047       bx        lr
+  0x0800C14C: 4523       movs      r3, #0x45
+  0x0800C14E: 0100       movs      r1, r0
+  0x0800C150: 0148       ldr       r0, [pc, #4]
+  0x0800C152: 0068       ldr       r0, [r0]
+  0x0800C154: 7047       bx        lr
+  0x0800C156: 00bf       nop       
+  0x0800C158: 18e0       b         #0x800c18c
+  0x0800C15A: 00e0       b         #0x800c15e
+  0x0800C15C: 2de9f04f   push.w    {r4, r5, r6, r7, r8, sb, sl, fp, lr}   <<<< UID LOAD
+  0x0800C160: adf57b7d   sub.w     sp, sp, #0x3ec
+  0x0800C164: dff86c5d   ldr.w     r5, [pc, #0xd6c]
+  0x0800C168: eb4c       ldr       r4, [pc, #0x3ac]
+  0x0800C16A: ec4b       ldr       r3, [pc, #0x3b0]
+  0x0800C16C: 40f2b117   movw      r7, #0x1b1
+  0x0800C170: 8b46       mov       fp, r1
+  0x0800C172: 0021       movs      r1, #0
+  0x0800C174: 4ff4b87e   mov.w     lr, #0x170
+  0x0800C178: 5a26       movs      r6, #0x5a
+  0x0800C17A: 40f2d319   movw      sb, #0x1d3
+  0x0800C17E: 4ff0c90c   mov.w     ip, #0xc9
+  0x0800C182: 4ff49078   mov.w     r8, #0x120
+  0x0800C186: 2c61       str       r4, [r5, #0x10]
+  0x0800C188: 40f22724   movw      r4, #0x227
+  0x0800C18C: 03f1400a   add.w     sl, r3, #0x40
+  0x0800C190: c3e91a6e   strd      r6, lr, [r3, #0x68]
+  0x0800C194: 40f2a91e   movw      lr, #0x1a9
+  0x0800C198: c3f870c0   str.w     ip, [r3, #0x70]
+  0x0800C19C: 4ff04f0c   mov.w     ip, #0x4f
+  0x0800C1A0: c5e90011   strd      r1, r1, [r5]
+  0x0800C1A4: c5e90211   strd      r1, r1, [r5, #8]
+  0x0800C1A8: c3e91874   strd      r7, r4, [r3, #0x60]
+  0x0800C1AC: 4ff4bc74   mov.w     r4, #0x178
+  0x0800C1B0: 8f27       movs      r7, #0x8f
+  0x0800C1B2: c3f85cc0   str.w     ip, [r3, #0x5c]
+  0x0800C1B6: 4ff0e40c   mov.w     ip, #0xe4
+  0x0800C1BA: 8ae8d002   stm.w     sl, {r4, r6, r7, sb}
+  0x0800C1BE: 03f15004   add.w     r4, r3, #0x50
+  0x0800C1C2: 4ff0050a   mov.w     sl, #5
+  0x0800C1C6: 5226       movs      r6, #0x52
+  0x0800C1C8: 4ff0a809   mov.w     sb, #0xa8
+  0x0800C1CC: 0727       movs      r7, #7
+  0x0800C1CE: c3f83cc0   str.w     ip, [r3, #0x3c]
+  0x0800C1D2: 4ff0980c   mov.w     ip, #0x98
+  0x0800C1D6: 84e80241   stm.w     r4, {r1, r8, lr}
+  0x0800C1DA: b724       movs      r4, #0xb7
+  0x0800C1DC: 4ff04c0e   mov.w     lr, #0x4c
+  0x0800C1E0: 4ff4ae78   mov.w     r8, #0x15c
+  0x0800C1E4: c3f81cc0   str.w     ip, [r3, #0x1c]
+  0x0800C1E8: c3e908a4   strd      sl, r4, [r3, #0x20]
+  0x0800C1EC: 03f12804   add.w     r4, r3, #0x28
+  0x0800C1F0: c3e90d8e   strd      r8, lr, [r3, #0x34]
+  0x0800C1F4: 4ff4c378   mov.w     r8, #0x186
+  0x0800C1F8: 4ff0850e   mov.w     lr, #0x85
+
+=== Сайт 0x0800C46E (пул 0x0800C520) ===
+  0x0800C41E: 0a20       movs      r0, #0xa
+  0x0800C420: b1fbf0f0   udiv      r0, r1, r0
+  0x0800C424: 00eb8000   add.w     r0, r0, r0, lsl #2
+  0x0800C428: a1eb4000   sub.w     r0, r1, r0, lsl #1
+  0x0800C42C: 3b49       ldr       r1, [pc, #0xec]
+  0x0800C42E: 00eb4000   add.w     r0, r0, r0, lsl #1
+  0x0800C432: 01eb8000   add.w     r0, r1, r0, lsl #2
+  0x0800C436: c96a       ldr       r1, [r1, #0x2c]
+  0x0800C438: 4068       ldr       r0, [r0, #4]
+  0x0800C43A: b0fbf1f2   udiv      r2, r0, r1
+  0x0800C43E: 02fb1100   mls       r0, r2, r1, r0
+  0x0800C442: 639a       ldr       r2, [sp, #0x18c]
+  0x0800C444: 1268       ldr       r2, [r2]
+  0x0800C446: 00f13201   add.w     r1, r0, #0x32
+  0x0800C44A: 00f13305   add.w     r5, r0, #0x33
+  0x0800C44E: 2492       str       r2, [sp, #0x90]
+  0x0800C450: 3be7       b         #0x800c2ca
+  0x0800C452: 6a98       ldr       r0, [sp, #0x1a8]
+  0x0800C454: 0028       cmp       r0, #0
+  0x0800C456: 01d5       bpl       #0x800c45c
+  0x0800C458: 6a98       ldr       r0, [sp, #0x1a8]
+  0x0800C45A: 4042       rsbs      r0, r0, #0
+  0x0800C45C: 04f0cdfb   bl        #0x8010bfa
+  0x0800C460: 2e49       ldr       r1, [pc, #0xb8]
+  0x0800C462: 04f0a1fb   bl        #0x8010ba8
+  0x0800C466: 00f1e601   add.w     r1, r0, #0xe6
+  0x0800C46A: 00f1e705   add.w     r5, r0, #0xe7
+  0x0800C46E: 2c48       ldr       r0, [pc, #0xb0]   <<<< UID LOAD
+  0x0800C470: 2a90       str       r0, [sp, #0xa8]
+  0x0800C472: 2ae7       b         #0x800c2ca
+  0x0800C474: 5899       ldr       r1, [sp, #0x160]
+  0x0800C476: bfaa       add       r2, sp, #0x2fc
+  0x0800C478: 379b       ldr       r3, [sp, #0xdc]
+  0x0800C47A: 505c       ldrb      r0, [r2, r1]
+  0x0800C47C: 40eac310   orr.w     r0, r0, r3, lsl #7
+  0x0800C480: 5054       strb      r0, [r2, r1]
+  0x0800C482: 6a98       ldr       r0, [sp, #0x1a8]
+  0x0800C484: 0028       cmp       r0, #0
+  0x0800C486: 01d5       bpl       #0x800c48c
+  0x0800C488: 6a98       ldr       r0, [sp, #0x1a8]
+  0x0800C48A: 4042       rsbs      r0, r0, #0
+  0x0800C48C: 04f0b5fb   bl        #0x8010bfa
+  0x0800C490: 2249       ldr       r1, [pc, #0x88]
+  0x0800C492: 04f089fb   bl        #0x8010ba8
+  0x0800C496: 00f5c471   add.w     r1, r0, #0x188
+  0x0800C49A: 00f28915   addw      r5, r0, #0x189
+  0x0800C49E: 3698       ldr       r0, [sp, #0xd8]
+  0x0800C4A0: 5fea5000   lsrs.w    r0, r0, #1
+  0x0800C4A4: 4fea3303   rrx       r3, r3
+  0x0800C4A8: 3690       str       r0, [sp, #0xd8]
+  0x0800C4AA: 3793       str       r3, [sp, #0xdc]
+  0x0800C4AC: 0de7       b         #0x800c2ca
+  0x0800C4AE: 6698       ldr       r0, [sp, #0x198]
+  0x0800C4B0: 0028       cmp       r0, #0
+  0x0800C4B2: 01d5       bpl       #0x800c4b8
+  0x0800C4B4: 6698       ldr       r0, [sp, #0x198]
+  0x0800C4B6: 4042       rsbs      r0, r0, #0
+  0x0800C4B8: 04f09ffb   bl        #0x8010bfa
+  0x0800C4BC: 1749       ldr       r1, [pc, #0x5c]
+  0x0800C4BE: 04f07efb   bl        #0x8010bbe
+  0x0800C4C2: 00f1e201   add.w     r1, r0, #0xe2
+  0x0800C4C6: 00f1e305   add.w     r5, r0, #0xe3
+  0x0800C4CA: 6398       ldr       r0, [sp, #0x18c]
+  0x0800C4CC: 0068       ldr       r0, [r0]
+  0x0800C4CE: 2b90       str       r0, [sp, #0xac]
+  0x0800C4D0: fbe6       b         #0x800c2ca
+  0x0800C4D2: dff81c0c   ldr.w     r0, [pc, #0xc1c]
+  0x0800C4D6: 0169       ldr       r1, [r0, #0x10]
+  0x0800C4D8: 7198       ldr       r0, [sp, #0x1c4]
+  0x0800C4DA: 0428       cmp       r0, #4
+  0x0800C4DC: c3f04286   blo.w     #0x8010164
+  0x0800C4E0: 41f00900   orr       r0, r1, #9
+  0x0800C4E4: 0029       cmp       r1, #0
+  0x0800C4E6: 4ff48b71   mov.w     r1, #0x116
+  0x0800C4EA: 02f0f6bd   b.w       #0x800f0da
+  0x0800C4EE: dff8080c   ldr.w     r0, [pc, #0xc08]
+  0x0800C4F2: 5f99       ldr       r1, [sp, #0x17c]
+  0x0800C4F4: 0844       add       r0, r1
+  0x0800C4F6: 6399       ldr       r1, [sp, #0x18c]
+  0x0800C4F8: 8142       cmp       r1, r0
+  0x0800C4FA: 83f03a86   bhs.w     #0x8010172
+  0x0800C4FE: ddf8b891   ldr.w     sb, [sp, #0x1b8]
+  0x0800C502: 064a       ldr       r2, [pc, #0x18]
+  0x0800C504: b9f1000f   cmp.w     sb, #0
+  0x0800C508: 44bf       itt       mi
+  0x0800C50A: 6e98       ldrmi     r0, [sp, #0x1b8]
+
+=== Сайт 0x0800D204 (пул 0x0800D5C8) ===
+  0x0800D1B4: 0a21       movs      r1, #0xa
+  0x0800D1B6: b0fbf1f1   udiv      r1, r0, r1
+  0x0800D1BA: 01eb8101   add.w     r1, r1, r1, lsl #2
+  0x0800D1BE: a0eb4100   sub.w     r0, r0, r1, lsl #1
+  0x0800D1C2: 5ff8a81c   ldr.w     r1, [pc, #-0xca8]
+  0x0800D1C6: 00eb4000   add.w     r0, r0, r0, lsl #1
+  0x0800D1CA: 51f82000   ldr.w     r0, [r1, r0, lsl #2]
+  0x0800D1CE: 4969       ldr       r1, [r1, #0x14]
+  0x0800D1D0: b0fbf1f2   udiv      r2, r0, r1
+  0x0800D1D4: 02fb1100   mls       r0, r2, r1, r0
+  0x0800D1D8: 00f19601   add.w     r1, r0, #0x96
+  0x0800D1DC: 00f19705   add.w     r5, r0, #0x97
+  0x0800D1E0: 6398       ldr       r0, [sp, #0x18c]
+  0x0800D1E2: 0068       ldr       r0, [r0]
+  0x0800D1E4: cce0       b         #0x800d380
+  0x0800D1E6: 6998       ldr       r0, [sp, #0x1a4]
+  0x0800D1E8: 0028       cmp       r0, #0
+  0x0800D1EA: 01d5       bpl       #0x800d1f0
+  0x0800D1EC: 6998       ldr       r0, [sp, #0x1a4]
+  0x0800D1EE: 4042       rsbs      r0, r0, #0
+  0x0800D1F0: 03f003fd   bl        #0x8010bfa
+  0x0800D1F4: 5ff8dc1c   ldr.w     r1, [pc, #-0xcdc]
+  0x0800D1F8: 03f0e1fc   bl        #0x8010bbe
+  0x0800D1FC: 00f58471   add.w     r1, r0, #0x108
+  0x0800D200: 00f20915   addw      r5, r0, #0x109
+  0x0800D204: f048       ldr       r0, [pc, #0x3c0]   <<<< UID LOAD
+  0x0800D206: 1e90       str       r0, [sp, #0x78]
+  0x0800D208: fff75fb8   b.w       #0x800c2ca
+  0x0800D20C: bcf1000f   cmp.w     ip, #0
+  0x0800D210: 03f14680   bmi.w     #0x80102a0
+  0x0800D214: 6f98       ldr       r0, [sp, #0x1bc]
+  0x0800D216: 5ff8fc3c   ldr.w     r3, [pc, #-0xcfc]
+  0x0800D21A: 0028       cmp       r0, #0
+  0x0800D21C: 01d5       bpl       #0x800d222
+  0x0800D21E: 6f98       ldr       r0, [sp, #0x1bc]
+  0x0800D220: 4042       rsbs      r0, r0, #0
+  0x0800D222: 03f0e0fc   bl        #0x8010be6
+  0x0800D226: 1621       movs      r1, #0x16
+  0x0800D228: 03f06eba   b.w       #0x8010708
+  0x0800D22C: 6a98       ldr       r0, [sp, #0x1a8]
+  0x0800D22E: 0028       cmp       r0, #0
+  0x0800D230: 01d5       bpl       #0x800d236
+  0x0800D232: 6a98       ldr       r0, [sp, #0x1a8]
+  0x0800D234: 4042       rsbs      r0, r0, #0
+  0x0800D236: 03f0e0fc   bl        #0x8010bfa
+  0x0800D23A: 5ff8201d   ldr.w     r1, [pc, #-0xd20]
+  0x0800D23E: 03f0b3fc   bl        #0x8010ba8
+  0x0800D242: 529a       ldr       r2, [sp, #0x148]
+  0x0800D244: 4ff49a71   mov.w     r1, #0x134
+  0x0800D248: 002a       cmp       r2, #0
+  0x0800D24A: 08bf       it        eq
+  0x0800D24C: 7121       moveq     r1, #0x71
+  0x0800D24E: 03f013bc   b.w       #0x8010a78
+  0x0800D252: de48       ldr       r0, [pc, #0x378]
+  0x0800D254: 2399       ldr       r1, [sp, #0x8c]
+  0x0800D256: 4840       eors      r0, r1
+  0x0800D258: df90       str       r0, [sp, #0x37c]
+  0x0800D25A: 7198       ldr       r0, [sp, #0x1c4]
+  0x0800D25C: 0028       cmp       r0, #0
+  0x0800D25E: 01d5       bpl       #0x800d264
+  0x0800D260: 7198       ldr       r0, [sp, #0x1c4]
+  0x0800D262: 4042       rsbs      r0, r0, #0
+  0x0800D264: 03f0c9fc   bl        #0x8010bfa
+  0x0800D268: 5ff8501d   ldr.w     r1, [pc, #-0xd50]
+  0x0800D26C: 03f09cfc   bl        #0x8010ba8
+  0x0800D270: 00f14901   add.w     r1, r0, #0x49
+  0x0800D274: 00f14a05   add.w     r5, r0, #0x4a
+  0x0800D278: 0020       movs      r0, #0
+  0x0800D27A: 5c90       str       r0, [sp, #0x170]
+  0x0800D27C: 0120       movs      r0, #1
+  0x0800D27E: 6190       str       r0, [sp, #0x184]
+  0x0800D280: fff723b8   b.w       #0x800c2ca
+  0x0800D284: d248       ldr       r0, [pc, #0x348]
+  0x0800D286: 3099       ldr       r1, [sp, #0xc0]
+  0x0800D288: 5ff8702d   ldr.w     r2, [pc, #-0xd70]
+  0x0800D28C: 4840       eors      r0, r1
+  0x0800D28E: b590       str       r0, [sp, #0x2d4]
+  0x0800D290: 5ff8a401   ldr.w     r0, [pc, #-0x1a4]
+  0x0800D294: 0069       ldr       r0, [r0, #0x10]
+  0x0800D296: 00eb8000   add.w     r0, r0, r0, lsl #2
+  0x0800D29A: 4000       lsls      r0, r0, #1
+  0x0800D29C: 48bf       it        mi
+  0x0800D29E: 4042       rsbmi     r0, r0, #0
+  0x0800D2A0: 0a21       movs      r1, #0xa
+
+=== Сайт 0x0800D5C0 (пул 0x0800D5C8) ===
+  0x0800D570: 0a21       movs      r1, #0xa
+  0x0800D572: b0fbf1f1   udiv      r1, r0, r1
+  0x0800D576: 01eb8101   add.w     r1, r1, r1, lsl #2
+  0x0800D57A: a0eb4100   sub.w     r0, r0, r1, lsl #1
+  0x0800D57E: 1549       ldr       r1, [pc, #0x54]
+  0x0800D580: 00eb4000   add.w     r0, r0, r0, lsl #1
+  0x0800D584: 51f82000   ldr.w     r0, [r1, r0, lsl #2]
+  0x0800D588: 4969       ldr       r1, [r1, #0x14]
+  0x0800D58A: b0fbf1f2   udiv      r2, r0, r1
+  0x0800D58E: 02fb1100   mls       r0, r2, r1, r0
+  0x0800D592: 639a       ldr       r2, [sp, #0x18c]
+  0x0800D594: 1268       ldr       r2, [r2]
+  0x0800D596: 00f28311   addw      r1, r0, #0x183
+  0x0800D59A: 00f5c275   add.w     r5, r0, #0x184
+  0x0800D59E: 2f92       str       r2, [sp, #0xbc]
+  0x0800D5A0: fef793be   b.w       #0x800c2ca
+  0x0800D5A4: 5d98       ldr       r0, [sp, #0x174]
+  0x0800D5A6: 0028       cmp       r0, #0
+  0x0800D5A8: 01d5       bpl       #0x800d5ae
+  0x0800D5AA: 5d98       ldr       r0, [sp, #0x174]
+  0x0800D5AC: 4042       rsbs      r0, r0, #0
+  0x0800D5AE: 03f024fb   bl        #0x8010bfa
+  0x0800D5B2: 0849       ldr       r1, [pc, #0x20]
+  0x0800D5B4: 03f003fb   bl        #0x8010bbe
+  0x0800D5B8: 00f1f001   add.w     r1, r0, #0xf0
+  0x0800D5BC: 00f1f105   add.w     r5, r0, #0xf1
+  0x0800D5C0: 0148       ldr       r0, [pc, #4]   <<<< UID LOAD
+  0x0800D5C2: 1b90       str       r0, [sp, #0x6c]
+  0x0800D5C4: fef781be   b.w       #0x800c2ca
+
+=== Сайт 0x0800D682 (пул 0x0800D998) ===
+  0x0800D632: 0a20       movs      r0, #0xa
+  0x0800D634: bafbf0f0   udiv      r0, sl, r0
+  0x0800D638: 00eb8000   add.w     r0, r0, r0, lsl #2
+  0x0800D63C: aaeb4000   sub.w     r0, sl, r0, lsl #1
+  0x0800D640: 00eb4000   add.w     r0, r0, r0, lsl #1
+  0x0800D644: 01eb8000   add.w     r0, r1, r0, lsl #2
+  0x0800D648: c96a       ldr       r1, [r1, #0x2c]
+  0x0800D64A: 4068       ldr       r0, [r0, #4]
+  0x0800D64C: b0fbf1f2   udiv      r2, r0, r1
+  0x0800D650: 02fb1100   mls       r0, r2, r1, r0
+  0x0800D654: 00f12b01   add.w     r1, r0, #0x2b
+  0x0800D658: 00f12c05   add.w     r5, r0, #0x2c
+  0x0800D65C: 0020       movs      r0, #0
+  0x0800D65E: 3b90       str       r0, [sp, #0xec]
+  0x0800D660: fef733be   b.w       #0x800c2ca
+  0x0800D664: 5d98       ldr       r0, [sp, #0x174]
+  0x0800D666: 0028       cmp       r0, #0
+  0x0800D668: 01d5       bpl       #0x800d66e
+  0x0800D66A: 5d98       ldr       r0, [sp, #0x174]
+  0x0800D66C: 4042       rsbs      r0, r0, #0
+  0x0800D66E: 03f0c4fa   bl        #0x8010bfa
+  0x0800D672: 5ff8a010   ldr.w     r1, [pc, #-0xa0]
+  0x0800D676: 03f097fa   bl        #0x8010ba8
+  0x0800D67A: 00f15b01   add.w     r1, r0, #0x5b
+  0x0800D67E: 00f15c05   add.w     r5, r0, #0x5c
+  0x0800D682: c548       ldr       r0, [pc, #0x314]   <<<< UID LOAD
+  0x0800D684: 2190       str       r0, [sp, #0x84]
+  0x0800D686: fef720be   b.w       #0x800c2ca
+  0x0800D68A: 5ff89c05   ldr.w     r0, [pc, #-0x59c]
+  0x0800D68E: 0069       ldr       r0, [r0, #0x10]
+  0x0800D690: 411e       subs      r1, r0, #1
+  0x0800D692: 48bf       it        mi
+  0x0800D694: c0f10101   rsbmi.w   r1, r0, #1
+  0x0800D698: 0a20       movs      r0, #0xa
+  0x0800D69A: b1fbf0f0   udiv      r0, r1, r0
+  0x0800D69E: 00eb8000   add.w     r0, r0, r0, lsl #2
+  0x0800D6A2: a1eb4000   sub.w     r0, r1, r0, lsl #1
+  0x0800D6A6: 5ff8d410   ldr.w     r1, [pc, #-0xd4]
+  0x0800D6AA: 00eb4000   add.w     r0, r0, r0, lsl #1
+  0x0800D6AE: 51f82000   ldr.w     r0, [r1, r0, lsl #2]
+  0x0800D6B2: 4969       ldr       r1, [r1, #0x14]
+  0x0800D6B4: b0fbf1f2   udiv      r2, r0, r1
+  0x0800D6B8: 02fb1100   mls       r0, r2, r1, r0
+  0x0800D6BC: 629a       ldr       r2, [sp, #0x188]
+  0x0800D6BE: 013a       subs      r2, #1
+  0x0800D6C0: 00f21511   addw      r1, r0, #0x115
+  0x0800D6C4: 00f58b75   add.w     r5, r0, #0x116
+  0x0800D6C8: 6292       str       r2, [sp, #0x188]
+  0x0800D6CA: fef7febd   b.w       #0x800c2ca
+  0x0800D6CE: 4298       ldr       r0, [sp, #0x108]
+  0x0800D6D0: 1f28       cmp       r0, #0x1f
+  0x0800D6D2: 02f30b86   bgt.w     #0x80102ec
+  0x0800D6D6: 5d98       ldr       r0, [sp, #0x174]
+  0x0800D6D8: 4ff4c371   mov.w     r1, #0x186
+  0x0800D6DC: 0028       cmp       r0, #0
+  0x0800D6DE: 01f0fcbc   b.w       #0x800f0da
+  0x0800D6E2: 0020       movs      r0, #0
+  0x0800D6E4: 0021       movs      r1, #0
+  0x0800D6E6: 4f90       str       r0, [sp, #0x13c]
+  0x0800D6E8: 5d98       ldr       r0, [sp, #0x174]
+  0x0800D6EA: ed91       str       r1, [sp, #0x3b4]
+  0x0800D6EC: 0028       cmp       r0, #0
+  0x0800D6EE: 01d5       bpl       #0x800d6f4
+  0x0800D6F0: 5d98       ldr       r0, [sp, #0x174]
+  0x0800D6F2: 4042       rsbs      r0, r0, #0
+  0x0800D6F4: 03f081fa   bl        #0x8010bfa
+  0x0800D6F8: 5ff82811   ldr.w     r1, [pc, #-0x128]
+  0x0800D6FC: 03f054fa   bl        #0x8010ba8
+  0x0800D700: 00f59871   add.w     r1, r0, #0x130
+  0x0800D704: 00f23115   addw      r5, r0, #0x131
+  0x0800D708: 0120       movs      r0, #1
+  0x0800D70A: 6090       str       r0, [sp, #0x180]
+  0x0800D70C: fef7ddbd   b.w       #0x800c2ca
+  0x0800D710: 6098       ldr       r0, [sp, #0x180]
+  0x0800D712: 0028       cmp       r0, #0
+  0x0800D714: 01d5       bpl       #0x800d71a
+  0x0800D716: 6098       ldr       r0, [sp, #0x180]
+  0x0800D718: 4042       rsbs      r0, r0, #0
+  0x0800D71A: 03f06efa   bl        #0x8010bfa
+  0x0800D71E: 5ff84c11   ldr.w     r1, [pc, #-0x14c]
+
+=== Сайт 0x0800DD50 (пул 0x0800DD7C) ===
+  0x0800DD00: 3899       ldr       r1, [sp, #0xe0]
+  0x0800DD02: 0020       movs      r0, #0
+  0x0800DD04: 4942       rsbs      r1, r1, #0
+  0x0800DD06: 3891       str       r1, [sp, #0xe0]
+  0x0800DD08: 4c99       ldr       r1, [sp, #0x130]
+  0x0800DD0A: 60eb0101   sbc.w     r1, r0, r1
+  0x0800DD0E: 6098       ldr       r0, [sp, #0x180]
+  0x0800DD10: 4c91       str       r1, [sp, #0x130]
+  0x0800DD12: 0028       cmp       r0, #0
+  0x0800DD14: 01d5       bpl       #0x800dd1a
+  0x0800DD16: 6098       ldr       r0, [sp, #0x180]
+  0x0800DD18: 4042       rsbs      r0, r0, #0
+  0x0800DD1A: 02f06eff   bl        #0x8010bfa
+  0x0800DD1E: 5ff84c17   ldr.w     r1, [pc, #-0x74c]
+  0x0800DD22: 02f04cff   bl        #0x8010bbe
+  0x0800DD26: 00f12e01   add.w     r1, r0, #0x2e
+  0x0800DD2A: 00f12f05   add.w     r5, r0, #0x2f
+  0x0800DD2E: fef7ccba   b.w       #0x800c2ca
+  0x0800DD32: 6098       ldr       r0, [sp, #0x180]
+  0x0800DD34: 0028       cmp       r0, #0
+  0x0800DD36: 01d5       bpl       #0x800dd3c
+  0x0800DD38: 6098       ldr       r0, [sp, #0x180]
+  0x0800DD3A: 4042       rsbs      r0, r0, #0
+  0x0800DD3C: 02f05dff   bl        #0x8010bfa
+  0x0800DD40: 5ff87017   ldr.w     r1, [pc, #-0x770]
+  0x0800DD44: 02f03bff   bl        #0x8010bbe
+  0x0800DD48: 00f1f101   add.w     r1, r0, #0xf1
+  0x0800DD4C: 00f1f205   add.w     r5, r0, #0xf2
+  0x0800DD50: 0a48       ldr       r0, [pc, #0x28]   <<<< UID LOAD
+  0x0800DD52: 1990       str       r0, [sp, #0x64]
+  0x0800DD54: fef7b9ba   b.w       #0x800c2ca
+  0x0800DD58: 6f98       ldr       r0, [sp, #0x1bc]
+  0x0800DD5A: 0028       cmp       r0, #0
+  0x0800DD5C: 02f02c85   beq.w     #0x80107b8
+  0x0800DD60: 5b98       ldr       r0, [sp, #0x16c]
+  0x0800DD62: 5ff89037   ldr.w     r3, [pc, #-0x790]
+  0x0800DD66: 0028       cmp       r0, #0
+  0x0800DD68: 01d5       bpl       #0x800dd6e
+  0x0800DD6A: 5b98       ldr       r0, [sp, #0x16c]
+  0x0800DD6C: 4042       rsbs      r0, r0, #0
+  0x0800DD6E: 02f03aff   bl        #0x8010be6
+  0x0800DD72: e921       movs      r1, #0xe9
+  0x0800DD74: 02f0c8bc   b.w       #0x8010708
+  0x0800DD78: 1451       str       r4, [r2, r4]
+  0x0800DD7A: 2401       lsls      r4, r4, #4
+
+=== Сайт 0x0800E068 (пул 0x0800E15C) ===
+  0x0800E018: f0fd5ff8   ldc2l     p8, c15, [r0, #0x17c]!
+  0x0800E01C: 481a       subs      r0, r1, r1
+  0x0800E01E: 02f0c3fd   bl        #0x8010ba8
+  0x0800E022: 00f5c971   add.w     r1, r0, #0x192
+  0x0800E026: 00f29315   addw      r5, r0, #0x193
+  0x0800E02A: 6398       ldr       r0, [sp, #0x18c]
+  0x0800E02C: 0068       ldr       r0, [r0]
+  0x0800E02E: 1890       str       r0, [sp, #0x60]
+  0x0800E030: fef74bb9   b.w       #0x800c2ca
+  0x0800E034: 6699       ldr       r1, [sp, #0x198]
+  0x0800E036: 0029       cmp       r1, #0
+  0x0800E038: 58bf       it        pl
+  0x0800E03A: 0846       movpl     r0, r1
+  0x0800E03C: 0a21       movs      r1, #0xa
+  0x0800E03E: b0fbf1f1   udiv      r1, r0, r1
+  0x0800E042: 01eb8101   add.w     r1, r1, r1, lsl #2
+  0x0800E046: a0eb4100   sub.w     r0, r0, r1, lsl #1
+  0x0800E04A: 5ff8781a   ldr.w     r1, [pc, #-0xa78]
+  0x0800E04E: 00eb4000   add.w     r0, r0, r0, lsl #1
+  0x0800E052: 51f82000   ldr.w     r0, [r1, r0, lsl #2]
+  0x0800E056: 4969       ldr       r1, [r1, #0x14]
+  0x0800E058: b0fbf1f2   udiv      r2, r0, r1
+  0x0800E05C: 02fb1100   mls       r0, r2, r1, r0
+  0x0800E060: 00f58571   add.w     r1, r0, #0x10a
+  0x0800E064: 00f20b15   addw      r5, r0, #0x10b
+  0x0800E068: 3c48       ldr       r0, [pc, #0xf0]   <<<< UID LOAD
+  0x0800E06A: 1f90       str       r0, [sp, #0x7c]
+  0x0800E06C: fef72db9   b.w       #0x800c2ca
+  0x0800E070: 5ff8840f   ldr.w     r0, [pc, #-0xf84]
+  0x0800E074: 0069       ldr       r0, [r0, #0x10]
+  0x0800E076: b0f10a01   subs.w    r1, r0, #0xa
+  0x0800E07A: 48bf       it        mi
+  0x0800E07C: c0f10a01   rsbmi.w   r1, r0, #0xa
+  0x0800E080: 0a20       movs      r0, #0xa
+  0x0800E082: b1fbf0f0   udiv      r0, r1, r0
+  0x0800E086: 00eb8000   add.w     r0, r0, r0, lsl #2
+  0x0800E08A: a1eb4000   sub.w     r0, r1, r0, lsl #1
+  0x0800E08E: 5ff8bc1a   ldr.w     r1, [pc, #-0xabc]
+  0x0800E092: 00eb4000   add.w     r0, r0, r0, lsl #1
+  0x0800E096: 01eb8000   add.w     r0, r1, r0, lsl #2
+  0x0800E09A: c96a       ldr       r1, [r1, #0x2c]
+  0x0800E09C: 4068       ldr       r0, [r0, #4]
+  0x0800E09E: b0fbf1f2   udiv      r2, r0, r1
+  0x0800E0A2: 02fb1100   mls       r0, r2, r1, r0
+  0x0800E0A6: 6d9a       ldr       r2, [sp, #0x1b4]
+  0x0800E0A8: 00f1d501   add.w     r1, r0, #0xd5
+  0x0800E0AC: 00f1d605   add.w     r5, r0, #0xd6
+  0x0800E0B0: 1d92       str       r2, [sp, #0x74]
+  0x0800E0B2: fef70ab9   b.w       #0x800c2ca
+  0x0800E0B6: 3a98       ldr       r0, [sp, #0xe8]
+  0x0800E0B8: 0928       cmp       r0, #9
+  0x0800E0BA: 02f35a81   bgt.w     #0x8010372
+  0x0800E0BE: 5ff8ec3a   ldr.w     r3, [pc, #-0xaec]
+  0x0800E0C2: 002d       cmp       r5, #0
+  0x0800E0C4: 00d5       bpl       #0x800e0c8
+  0x0800E0C6: 6d42       rsbs      r5, r5, #0
+  0x0800E0C8: 0a21       movs      r1, #0xa
+  0x0800E0CA: 03f11402   add.w     r2, r3, #0x14
+  0x0800E0CE: 02f0dafd   bl        #0x8010c86
+  0x0800E0D2: ae21       movs      r1, #0xae
+  0x0800E0D4: 02f0c7bc   b.w       #0x8010a66
+  0x0800E0D8: 6298       ldr       r0, [sp, #0x188]
+  0x0800E0DA: 0028       cmp       r0, #0
+  0x0800E0DC: 02f0b283   beq.w     #0x8010844
+  0x0800E0E0: 6a98       ldr       r0, [sp, #0x1a8]
+  0x0800E0E2: 5ff8103b   ldr.w     r3, [pc, #-0xb10]
+  0x0800E0E6: 0028       cmp       r0, #0
+  0x0800E0E8: 01d5       bpl       #0x800e0ee
+  0x0800E0EA: 6a98       ldr       r0, [sp, #0x1a8]
+  0x0800E0EC: 4042       rsbs      r0, r0, #0
+  0x0800E0EE: 02f07afd   bl        #0x8010be6
+  0x0800E0F2: 4f21       movs      r1, #0x4f
+  0x0800E0F4: 02f008bb   b.w       #0x8010708
+  0x0800E0F8: 4ff4d040   mov.w     r0, #0x6800
+  0x0800E0FC: 8390       str       r0, [sp, #0x20c]
+  0x0800E0FE: 1648       ldr       r0, [pc, #0x58]
+  0x0800E100: a0f50000   sub.w     r0, r0, #0x800000
+  0x0800E104: 8490       str       r0, [sp, #0x210]
+
+=== Сайт 0x0800E364 (пул 0x0800E700) ===
+  0x0800E314: 00eb8000   add.w     r0, r0, r0, lsl #2
+  0x0800E318: a1eb4000   sub.w     r0, r1, r0, lsl #1
+  0x0800E31C: 5ff84c1d   ldr.w     r1, [pc, #-0xd4c]
+  0x0800E320: 00eb4000   add.w     r0, r0, r0, lsl #1
+  0x0800E324: 01eb8000   add.w     r0, r1, r0, lsl #2
+  0x0800E328: c96a       ldr       r1, [r1, #0x2c]
+  0x0800E32A: 4068       ldr       r0, [r0, #4]
+  0x0800E32C: b0fbf1f2   udiv      r2, r0, r1
+  0x0800E330: 02fb1100   mls       r0, r2, r1, r0
+  0x0800E334: 00f1d701   add.w     r1, r0, #0xd7
+  0x0800E338: 00f1d805   add.w     r5, r0, #0xd8
+  0x0800E33C: 6398       ldr       r0, [sp, #0x18c]
+  0x0800E33E: 0068       ldr       r0, [r0]
+  0x0800E340: 2590       str       r0, [sp, #0x94]
+  0x0800E342: fdf7c2bf   b.w       #0x800c2ca
+  0x0800E346: 5d98       ldr       r0, [sp, #0x174]
+  0x0800E348: 0028       cmp       r0, #0
+  0x0800E34A: 01d5       bpl       #0x800e350
+  0x0800E34C: 5d98       ldr       r0, [sp, #0x174]
+  0x0800E34E: 4042       rsbs      r0, r0, #0
+  0x0800E350: 02f053fc   bl        #0x8010bfa
+  0x0800E354: 5ff8841d   ldr.w     r1, [pc, #-0xd84]
+  0x0800E358: 02f026fc   bl        #0x8010ba8
+  0x0800E35C: 00f11901   add.w     r1, r0, #0x19
+  0x0800E360: 00f11a05   add.w     r5, r0, #0x1a
+  0x0800E364: e648       ldr       r0, [pc, #0x398]   <<<< UID LOAD
+  0x0800E366: 2090       str       r0, [sp, #0x80]
+  0x0800E368: fdf7afbf   b.w       #0x800c2ca
+  0x0800E36C: 6298       ldr       r0, [sp, #0x188]
+  0x0800E36E: 0028       cmp       r0, #0
+  0x0800E370: 02f08982   beq.w     #0x8010886
+  0x0800E374: 6998       ldr       r0, [sp, #0x1a4]
+  0x0800E376: 0028       cmp       r0, #0
+  0x0800E378: 58bf       it        pl
+  0x0800E37A: 0746       movpl     r7, r0
+  0x0800E37C: 0a20       movs      r0, #0xa
+  0x0800E37E: b7fbf0f0   udiv      r0, r7, r0
+  0x0800E382: 00eb8000   add.w     r0, r0, r0, lsl #2
+  0x0800E386: a7eb4000   sub.w     r0, r7, r0, lsl #1
+  0x0800E38A: 86e3       b         #0x800ea9a
+  0x0800E38C: dd48       ldr       r0, [pc, #0x374]
+  0x0800E38E: 3399       ldr       r1, [sp, #0xcc]
+  0x0800E390: 0023       movs      r3, #0
+  0x0800E392: 4840       eors      r0, r1
+  0x0800E394: e190       str       r0, [sp, #0x384]
+  0x0800E396: 6198       ldr       r0, [sp, #0x184]
+  0x0800E398: 5c99       ldr       r1, [sp, #0x170]
+  0x0800E39A: 5f9a       ldr       r2, [sp, #0x17c]
+  0x0800E39C: f7f78eff   bl        #0x80062bc
+  0x0800E3A0: 5ff84412   ldr.w     r1, [pc, #-0x244]
+  0x0800E3A4: 22f00300   bic       r0, r2, #3
+  0x0800E3A8: 0844       add       r0, r1
+  0x0800E3AA: 6390       str       r0, [sp, #0x18c]
+  0x0800E3AC: 5ff84c02   ldr.w     r0, [pc, #-0x24c]
+  0x0800E3B0: 0069       ldr       r0, [r0, #0x10]
+  0x0800E3B2: 80f00801   eor       r1, r0, #8
+  0x0800E3B6: 01ebe071   add.w     r1, r1, r0, asr #31
+  0x0800E3BA: 81eae070   eor.w     r0, r1, r0, asr #31
+  0x0800E3BE: 0a21       movs      r1, #0xa
+  0x0800E3C0: b0fbf1f1   udiv      r1, r0, r1
+  0x0800E3C4: 01eb8101   add.w     r1, r1, r1, lsl #2
+  0x0800E3C8: a0eb4100   sub.w     r0, r0, r1, lsl #1
+  0x0800E3CC: 5ff8fc1d   ldr.w     r1, [pc, #-0xdfc]
+  0x0800E3D0: 00eb4000   add.w     r0, r0, r0, lsl #1
+  0x0800E3D4: 01eb8000   add.w     r0, r1, r0, lsl #2
+  0x0800E3D8: c96a       ldr       r1, [r1, #0x2c]
+  0x0800E3DA: 4068       ldr       r0, [r0, #4]
+  0x0800E3DC: b0fbf1f2   udiv      r2, r0, r1
+  0x0800E3E0: 02fb1100   mls       r0, r2, r1, r0
+  0x0800E3E4: 00f22711   addw      r1, r0, #0x127
+  0x0800E3E8: 00f59475   add.w     r5, r0, #0x128
+  0x0800E3EC: fdf76dbf   b.w       #0x800c2ca
+  0x0800E3F0: 6498       ldr       r0, [sp, #0x190]
+  0x0800E3F2: eda9       add       r1, sp, #0x3b4
+  0x0800E3F4: 51f82000   ldr.w     r0, [r1, r0, lsl #2]
+  0x0800E3F8: 20fa0bf0   lsr.w     r0, r0, fp
+  0x0800E3FC: c007       lsls      r0, r0, #0x1f
+  0x0800E3FE: 02f05082   beq.w     #0x80108a2
+  0x0800E402: 7198       ldr       r0, [sp, #0x1c4]
+
+=== Сайт 0x0800E7B4 (пул 0x0800EACC) ===
+  0x0800E764: f798       ldr       r0, [sp, #0x3dc]
+  0x0800E766: 5a90       str       r0, [sp, #0x168]
+  0x0800E768: fdf7afbd   b.w       #0x800c2ca
+  0x0800E76C: 5ff80c06   ldr.w     r0, [pc, #-0x60c]
+  0x0800E770: 5e99       ldr       r1, [sp, #0x178]
+  0x0800E772: 0069       ldr       r0, [r0, #0x10]
+  0x0800E774: 0029       cmp       r1, #0
+  0x0800E776: 02f0b480   beq.w     #0x80108e2
+  0x0800E77A: 40f00901   orr       r1, r0, #9
+  0x0800E77E: 02f0aafa   bl        #0x8010cd6
+  0x0800E782: 4e20       movs      r0, #0x4e
+  0x0800E784: 02f0b2b8   b.w       #0x80108ec
+  0x0800E788: 6998       ldr       r0, [sp, #0x1a4]
+  0x0800E78A: 5ff88010   ldr.w     r1, [pc, #-0x80]
+  0x0800E78E: 0028       cmp       r0, #0
+  0x0800E790: 58bf       it        pl
+  0x0800E792: 0746       movpl     r7, r0
+  0x0800E794: 0a20       movs      r0, #0xa
+  0x0800E796: b7fbf0f0   udiv      r0, r7, r0
+  0x0800E79A: 00eb8000   add.w     r0, r0, r0, lsl #2
+  0x0800E79E: a7eb4000   sub.w     r0, r7, r0, lsl #1
+  0x0800E7A2: 00eb4000   add.w     r0, r0, r0, lsl #1
+  0x0800E7A6: 51f82000   ldr.w     r0, [r1, r0, lsl #2]
+  0x0800E7AA: 4969       ldr       r1, [r1, #0x14]
+  0x0800E7AC: b0fbf1f2   udiv      r2, r0, r1
+  0x0800E7B0: 02fb1100   mls       r0, r2, r1, r0
+  0x0800E7B4: c54a       ldr       r2, [pc, #0x314]   <<<< UID LOAD
+  0x0800E7B6: 00f1d701   add.w     r1, r0, #0xd7
+  0x0800E7BA: 00f1d805   add.w     r5, r0, #0xd8
+  0x0800E7BE: 1d92       str       r2, [sp, #0x74]
+  0x0800E7C0: fdf783bd   b.w       #0x800c2ca
+  0x0800E7C4: 5ff86406   ldr.w     r0, [pc, #-0x664]
+  0x0800E7C8: 6ff00801   mvn       r1, #8
+  0x0800E7CC: 0069       ldr       r0, [r0, #0x10]
+  0x0800E7CE: 10f10902   adds.w    r2, r0, #9
+  0x0800E7D2: 48bf       it        mi
+  0x0800E7D4: 0a1a       submi     r2, r1, r0
+  0x0800E7D6: 0a20       movs      r0, #0xa
+  0x0800E7D8: 5ff8d010   ldr.w     r1, [pc, #-0xd0]
+  0x0800E7DC: b2fbf0f0   udiv      r0, r2, r0
+  0x0800E7E0: 00eb8000   add.w     r0, r0, r0, lsl #2
+  0x0800E7E4: a2eb4000   sub.w     r0, r2, r0, lsl #1
+  0x0800E7E8: 00eb4000   add.w     r0, r0, r0, lsl #1
+  0x0800E7EC: 51f82000   ldr.w     r0, [r1, r0, lsl #2]
+  0x0800E7F0: 4969       ldr       r1, [r1, #0x14]
+  0x0800E7F2: b0fbf1f2   udiv      r2, r0, r1
+  0x0800E7F6: 02fb1100   mls       r0, r2, r1, r0
+  0x0800E7FA: 00f20911   addw      r1, r0, #0x109
+  0x0800E7FE: 00f58575   add.w     r5, r0, #0x10a
+  0x0800E802: 6d98       ldr       r0, [sp, #0x1b4]
+  0x0800E804: 1c90       str       r0, [sp, #0x70]
+  0x0800E806: fdf760bd   b.w       #0x800c2ca
+  0x0800E80A: 6b98       ldr       r0, [sp, #0x1ac]
+  0x0800E80C: 0028       cmp       r0, #0
+  0x0800E80E: 01d5       bpl       #0x800e814
+  0x0800E810: 6b98       ldr       r0, [sp, #0x1ac]
+  0x0800E812: 4042       rsbs      r0, r0, #0
+  0x0800E814: 02f0f1f9   bl        #0x8010bfa
+  0x0800E818: 5ff81011   ldr.w     r1, [pc, #-0x110]
+  0x0800E81C: 02f0c4f9   bl        #0x8010ba8
+  0x0800E820: 00f5c371   add.w     r1, r0, #0x186
+  0x0800E824: 00f28715   addw      r5, r0, #0x187
+  0x0800E828: 01f021ba   b.w       #0x800fc6e
+  0x0800E82C: 5ff8cc06   ldr.w     r0, [pc, #-0x6cc]
+  0x0800E830: 0069       ldr       r0, [r0, #0x10]
+  0x0800E832: 80eae071   eor.w     r1, r0, r0, asr #31
+  0x0800E836: 81f00201   eor       r1, r1, #2
+  0x0800E83A: a1ebe070   sub.w     r0, r1, r0, asr #31
+  0x0800E83E: 0a21       movs      r1, #0xa
+  0x0800E840: b0fbf1f1   udiv      r1, r0, r1
+  0x0800E844: 01eb8101   add.w     r1, r1, r1, lsl #2
+  0x0800E848: a0eb4100   sub.w     r0, r0, r1, lsl #1
+  0x0800E84C: 5ff84411   ldr.w     r1, [pc, #-0x144]
+  0x0800E850: 00eb4000   add.w     r0, r0, r0, lsl #1
+
+=== Сайт 0x0800ECDC (пул 0x0800EEA4) ===
+  0x0800EC8C: 8000       lsls      r0, r0, #2
+  0x0800EC8E: a8eb4000   sub.w     r0, r8, r0, lsl #1
+  0x0800EC92: 00eb4000   add.w     r0, r0, r0, lsl #1
+  0x0800EC96: 51f82000   ldr.w     r0, [r1, r0, lsl #2]
+  0x0800EC9A: 4969       ldr       r1, [r1, #0x14]
+  0x0800EC9C: b0fbf1f2   udiv      r2, r0, r1
+  0x0800ECA0: 02fb1100   mls       r0, r2, r1, r0
+  0x0800ECA4: 6f9a       ldr       r2, [sp, #0x1bc]
+  0x0800ECA6: 811d       adds      r1, r0, #6
+  0x0800ECA8: c51d       adds      r5, r0, #7
+  0x0800ECAA: 6d98       ldr       r0, [sp, #0x1b4]
+  0x0800ECAC: 42ea4000   orr.w     r0, r2, r0, lsl #1
+  0x0800ECB0: 6d90       str       r0, [sp, #0x1b4]
+  0x0800ECB2: fdf70abb   b.w       #0x800c2ca
+  0x0800ECB6: 5ff8540b   ldr.w     r0, [pc, #-0xb54]
+  0x0800ECBA: 0069       ldr       r0, [r0, #0x10]
+  0x0800ECBC: 00eb4000   add.w     r0, r0, r0, lsl #1
+  0x0800ECC0: 0028       cmp       r0, #0
+  0x0800ECC2: 00d5       bpl       #0x800ecc6
+  0x0800ECC4: 4042       rsbs      r0, r0, #0
+  0x0800ECC6: 0a21       movs      r1, #0xa
+  0x0800ECC8: 5ff8c025   ldr.w     r2, [pc, #-0x5c0]
+  0x0800ECCC: 01f09dff   bl        #0x8010c0a
+  0x0800ECD0: 01f0c0ff   bl        #0x8010c54
+  0x0800ECD4: 00f20911   addw      r1, r0, #0x109
+  0x0800ECD8: 00f58575   add.w     r5, r0, #0x10a
+  0x0800ECDC: 7148       ldr       r0, [pc, #0x1c4]   <<<< UID LOAD
+  0x0800ECDE: 1c90       str       r0, [sp, #0x70]
+  0x0800ECE0: fdf7f3ba   b.w       #0x800c2ca
+  0x0800ECE4: 1c98       ldr       r0, [sp, #0x70]
+  0x0800ECE6: 0499       ldr       r1, [sp, #0x10]
+  0x0800ECE8: 8847       blx       r1
+  0x0800ECEA: bb90       str       r0, [sp, #0x2ec]
+  0x0800ECEC: 6c98       ldr       r0, [sp, #0x1b0]
+  0x0800ECEE: 0028       cmp       r0, #0
+  0x0800ECF0: 01d5       bpl       #0x800ecf6
+  0x0800ECF2: 6c98       ldr       r0, [sp, #0x1b0]
+  0x0800ECF4: 4042       rsbs      r0, r0, #0
+  0x0800ECF6: 01f080ff   bl        #0x8010bfa
+  0x0800ECFA: 5ff8f015   ldr.w     r1, [pc, #-0x5f0]
+  0x0800ECFE: 01f05eff   bl        #0x8010bbe
+  0x0800ED02: 00f1d001   add.w     r1, r0, #0xd0
+  0x0800ED06: 00f1d105   add.w     r5, r0, #0xd1
+  0x0800ED0A: fdf7deba   b.w       #0x800c2ca
+  0x0800ED0E: 1e98       ldr       r0, [sp, #0x78]
+  0x0800ED10: 0599       ldr       r1, [sp, #0x14]
+  0x0800ED12: 8847       blx       r1
+  0x0800ED14: ab90       str       r0, [sp, #0x2ac]
+  0x0800ED16: 6898       ldr       r0, [sp, #0x1a0]
+  0x0800ED18: 0028       cmp       r0, #0
+  0x0800ED1A: 01d5       bpl       #0x800ed20
+  0x0800ED1C: 6898       ldr       r0, [sp, #0x1a0]
+  0x0800ED1E: 4042       rsbs      r0, r0, #0
+  0x0800ED20: 01f06bff   bl        #0x8010bfa
+  0x0800ED24: 5ff81c16   ldr.w     r1, [pc, #-0x61c]
+  0x0800ED28: 01f049ff   bl        #0x8010bbe
+  0x0800ED2C: 00f19b01   add.w     r1, r0, #0x9b
+  0x0800ED30: 00f19c05   add.w     r5, r0, #0x9c
+  0x0800ED34: fdf7c9ba   b.w       #0x800c2ca
+  0x0800ED38: 6498       ldr       r0, [sp, #0x190]
+  0x0800ED3A: eda9       add       r1, sp, #0x3b4
+  0x0800ED3C: 51f82000   ldr.w     r0, [r1, r0, lsl #2]
+  0x0800ED40: 20fa0bf0   lsr.w     r0, r0, fp
+  0x0800ED44: c007       lsls      r0, r0, #0x1f
+  0x0800ED46: 01f02386   beq.w     #0x8010990
+  0x0800ED4A: 6098       ldr       r0, [sp, #0x180]
+  0x0800ED4C: 5ff84436   ldr.w     r3, [pc, #-0x644]
+  0x0800ED50: 0028       cmp       r0, #0
+  0x0800ED52: 48bf       it        mi
+  0x0800ED54: a0eb4000   submi.w   r0, r0, r0, lsl #1
+  0x0800ED58: 03f11402   add.w     r2, r3, #0x14
+  0x0800ED5C: 01f04dff   bl        #0x8010bfa
+  0x0800ED60: 5521       movs      r1, #0x55
+  0x0800ED62: 01f080be   b.w       #0x8010a66
+  0x0800ED66: 6398       ldr       r0, [sp, #0x18c]
+  0x0800ED68: 0028       cmp       r0, #0
+  0x0800ED6A: 01f02486   beq.w     #0x80109b6
+  0x0800ED6E: 5ff80c0c   ldr.w     r0, [pc, #-0xc0c]
+  0x0800ED72: 5ff86836   ldr.w     r3, [pc, #-0x668]
+  0x0800ED76: 01f0b3ff   bl        #0x8010ce0
+  0x0800ED7A: c000       lsls      r0, r0, #3
+
+=== Сайт 0x0800EE4E (пул 0x0800EEA4) ===
+  0x0800EDFE: 02fb1100   mls       r0, r2, r1, r0
+  0x0800EE02: 00f19801   add.w     r1, r0, #0x98
+  0x0800EE06: 00f19905   add.w     r5, r0, #0x99
+  0x0800EE0A: 6398       ldr       r0, [sp, #0x18c]
+  0x0800EE0C: 0068       ldr       r0, [r0]
+  0x0800EE0E: 2d90       str       r0, [sp, #0xb4]
+  0x0800EE10: fdf75bba   b.w       #0x800c2ca
+  0x0800EE14: 2448       ldr       r0, [pc, #0x90]
+  0x0800EE16: 3499       ldr       r1, [sp, #0xd0]
+  0x0800EE18: 4840       eors      r0, r1
+  0x0800EE1A: b490       str       r0, [sp, #0x2d0]
+  0x0800EE1C: 4ff69000   movw      r0, #0xf890
+  0x0800EE20: 6599       ldr       r1, [sp, #0x194]
+  0x0800EE22: 40ea4130   orr.w     r0, r0, r1, lsl #13
+  0x0800EE26: 9390       str       r0, [sp, #0x24c]
+  0x0800EE28: 4ff08050   mov.w     r0, #0x10000000
+  0x0800EE2C: 00ea8160   and.w     r0, r0, r1, lsl #26
+  0x0800EE30: 61f39750   bfi       r0, r1, #0x16, #2
+  0x0800EE34: 4ff2c031   movw      r1, #0xf3c0
+  0x0800EE38: 0843       orrs      r0, r1
+  0x0800EE3A: 9490       str       r0, [sp, #0x250]
+  0x0800EE3C: dde9ef01   ldrd      r0, r1, [sp, #0x3bc]
+  0x0800EE40: c043       mvns      r0, r0
+  0x0800EE42: a590       str       r0, [sp, #0x294]
+  0x0800EE44: c843       mvns      r0, r1
+  0x0800EE46: a690       str       r0, [sp, #0x298]
+  0x0800EE48: 44f27070   movw      r0, #0x4770
+  0x0800EE4C: 9590       str       r0, [sp, #0x254]
+  0x0800EE4E: 1548       ldr       r0, [pc, #0x54]   <<<< UID LOAD
+  0x0800EE50: bff35f8f   dmb       sy
+  0x0800EE54: bff36f8f   isb       sy
+  0x0800EE58: 0f99       ldr       r1, [sp, #0x3c]
+  0x0800EE5A: 8847       blx       r1
+  0x0800EE5C: 6f90       str       r0, [sp, #0x1bc]
+  0x0800EE5E: 5ff8fc0c   ldr.w     r0, [pc, #-0xcfc]
+  0x0800EE62: 0069       ldr       r0, [r0, #0x10]
+  0x0800EE64: 0430       adds      r0, #4
+  0x0800EE66: 48bf       it        mi
+  0x0800EE68: a0eb4000   submi.w   r0, r0, r0, lsl #1
+  0x0800EE6C: 0a21       movs      r1, #0xa
+  0x0800EE6E: b0fbf1f1   udiv      r1, r0, r1
+  0x0800EE72: 01eb8101   add.w     r1, r1, r1, lsl #2
+  0x0800EE76: a0eb4100   sub.w     r0, r0, r1, lsl #1
+  0x0800EE7A: 5ff87017   ldr.w     r1, [pc, #-0x770]
+  0x0800EE7E: 00eb4000   add.w     r0, r0, r0, lsl #1
+  0x0800EE82: 51f82000   ldr.w     r0, [r1, r0, lsl #2]
+  0x0800EE86: 4969       ldr       r1, [r1, #0x14]
+  0x0800EE88: b0fbf1f2   udiv      r2, r0, r1
+  0x0800EE8C: 02fb1100   mls       r0, r2, r1, r0
+  0x0800EE90: 00f1f601   add.w     r1, r0, #0xf6
+  0x0800EE94: 00f1f705   add.w     r5, r0, #0xf7
+  0x0800EE98: fdf717ba   b.w       #0x800c2ca
+  0x0800EE9C: 8456       ldrsb     r4, [r0, r2]
+  0x0800EE9E: e101       lsls      r1, r4, #7
+  0x0800EEA0: 1456       ldrsb     r4, [r2, r0]
+  0x0800EEA2: 1101       lsls      r1, r2, #4
+
+=== Сайт 0x0800F5A8 (пул 0x0800F950) ===
+  0x0800F558: 02fb1100   mls       r0, r2, r1, r0
+  0x0800F55C: 011d       adds      r1, r0, #4
+  0x0800F55E: 451d       adds      r5, r0, #5
+  0x0800F560: 6d98       ldr       r0, [sp, #0x1b4]
+  0x0800F562: 4000       lsls      r0, r0, #1
+  0x0800F564: 0130       adds      r0, #1
+  0x0800F566: 6d90       str       r0, [sp, #0x1b4]
+  0x0800F568: fcf7afbe   b.w       #0x800c2ca
+  0x0800F56C: 5ff82001   ldr.w     r0, [pc, #-0x120]
+  0x0800F570: 0069       ldr       r0, [r0, #0x10]
+  0x0800F572: c11f       subs      r1, r0, #7
+  0x0800F574: 48bf       it        mi
+  0x0800F576: c0f10701   rsbmi.w   r1, r0, #7
+  0x0800F57A: 0a20       movs      r0, #0xa
+  0x0800F57C: b1fbf0f0   udiv      r0, r1, r0
+  0x0800F580: 00eb8000   add.w     r0, r0, r0, lsl #2
+  0x0800F584: a1eb4000   sub.w     r0, r1, r0, lsl #1
+  0x0800F588: 5ff8801e   ldr.w     r1, [pc, #-0xe80]
+  0x0800F58C: 00eb4000   add.w     r0, r0, r0, lsl #1
+  0x0800F590: 01eb8000   add.w     r0, r1, r0, lsl #2
+  0x0800F594: c96a       ldr       r1, [r1, #0x2c]
+  0x0800F596: 4068       ldr       r0, [r0, #4]
+  0x0800F598: b0fbf1f2   udiv      r2, r0, r1
+  0x0800F59C: 02fb1100   mls       r0, r2, r1, r0
+  0x0800F5A0: 00f16d01   add.w     r1, r0, #0x6d
+  0x0800F5A4: 00f16e05   add.w     r5, r0, #0x6e
+  0x0800F5A8: e948       ldr       r0, [pc, #0x3a4]   <<<< UID LOAD
+  0x0800F5AA: 1a90       str       r0, [sp, #0x68]
+  0x0800F5AC: fcf78dbe   b.w       #0x800c2ca
+  0x0800F5B0: e848       ldr       r0, [pc, #0x3a0]
+  0x0800F5B2: 2299       ldr       r1, [sp, #0x88]
+  0x0800F5B4: 4840       eors      r0, r1
+  0x0800F5B6: e190       str       r0, [sp, #0x384]
+  0x0800F5B8: 6e98       ldr       r0, [sp, #0x1b8]
+  0x0800F5BA: 0028       cmp       r0, #0
+  0x0800F5BC: 01d5       bpl       #0x800f5c2
+  0x0800F5BE: 6e98       ldr       r0, [sp, #0x1b8]
+  0x0800F5C0: 4042       rsbs      r0, r0, #0
+  0x0800F5C2: 01f01afb   bl        #0x8010bfa
+  0x0800F5C6: 5ff8bc1e   ldr.w     r1, [pc, #-0xebc]
+  0x0800F5CA: 01f0f8fa   bl        #0x8010bbe
+  0x0800F5CE: 00f23311   addw      r1, r0, #0x133
+  0x0800F5D2: 00f59a75   add.w     r5, r0, #0x134
+  0x0800F5D6: 5198       ldr       r0, [sp, #0x144]
+  0x0800F5D8: 0130       adds      r0, #1
+  0x0800F5DA: 5190       str       r0, [sp, #0x144]
+  0x0800F5DC: fcf775be   b.w       #0x800c2ca
+  0x0800F5E0: 5798       ldr       r0, [sp, #0x15c]
+  0x0800F5E2: 449b       ldr       r3, [sp, #0x110]
+  0x0800F5E4: 50f82300   ldr.w     r0, [r0, r3, lsl #2]
+  0x0800F5E8: f1a9       add       r1, sp, #0x3c4
+  0x0800F5EA: 41f82300   str.w     r0, [r1, r3, lsl #2]
+  0x0800F5EE: 6e98       ldr       r0, [sp, #0x1b8]
+  0x0800F5F0: 0028       cmp       r0, #0
+  0x0800F5F2: 01d5       bpl       #0x800f5f8
+  0x0800F5F4: 6e98       ldr       r0, [sp, #0x1b8]
+  0x0800F5F6: 4042       rsbs      r0, r0, #0
+  0x0800F5F8: 01f068fb   bl        #0x8010ccc
+  0x0800F5FC: 4493       str       r3, [sp, #0x110]
+  0x0800F5FE: 01f033fb   bl        #0x8010c68
+  0x0800F602: 5ff8f81e   ldr.w     r1, [pc, #-0xef8]
+  0x0800F606: 01f0dafa   bl        #0x8010bbe
+  0x0800F60A: 00f1d201   add.w     r1, r0, #0xd2
+  0x0800F60E: 00f1d305   add.w     r5, r0, #0xd3
+  0x0800F612: fcf75abe   b.w       #0x800c2ca
+  0x0800F616: 7198       ldr       r0, [sp, #0x1c4]
+  0x0800F618: 0028       cmp       r0, #0
+  0x0800F61A: 01d5       bpl       #0x800f620
+  0x0800F61C: 7198       ldr       r0, [sp, #0x1c4]
+  0x0800F61E: 4042       rsbs      r0, r0, #0
+  0x0800F620: 01f0ebfa   bl        #0x8010bfa
+  0x0800F624: 5ff81c1f   ldr.w     r1, [pc, #-0xf1c]
+  0x0800F628: 00eb4000   add.w     r0, r0, r0, lsl #1
+  0x0800F62C: 51f82000   ldr.w     r0, [r1, r0, lsl #2]
+  0x0800F630: 4969       ldr       r1, [r1, #0x14]
+  0x0800F632: a2e0       b         #0x800f77a
+  0x0800F634: c848       ldr       r0, [pc, #0x320]
+  0x0800F636: 2d99       ldr       r1, [sp, #0xb4]
+  0x0800F638: 4840       eors      r0, r1
+  0x0800F63A: f590       str       r0, [sp, #0x3d4]
+  0x0800F63C: 6b98       ldr       r0, [sp, #0x1ac]
+  0x0800F63E: 0028       cmp       r0, #0
+  0x0800F640: 01d5       bpl       #0x800f646
+  0x0800F642: 6b98       ldr       r0, [sp, #0x1ac]
+  0x0800F644: 4042       rsbs      r0, r0, #0
+

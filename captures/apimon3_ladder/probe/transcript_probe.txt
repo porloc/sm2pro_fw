@@ -1,0 +1,25 @@
+===== log1.bin [LOG1]: 12 вызовов
+[  0] t=      0.0ms CreateFileW      site=0x67 ret=1
+        open('\.\SmUsb000')
+[  1] t=      0.0ms DeviceIoControl  site=0x1b1 ret=1
+        buf@0x0089EB20(320B) @0xa9: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 60 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 01 00 00 00…
+[  2] t=      0.0ms DeviceIoControl  site=0x71 ret=1
+        buf@0x0089DC48(8B) @0x12a: 86 04 00 DF 00 5A 64 FD   <-- CMD 0x86 86
+[  3] t=      0.0ms DeviceIoControl  site=0x71 ret=1
+        buf@0x0089DC48(8B) @0x12a: 00 04 00 59 00 5A 64 FD   <-- RESP status=04 len=0x00
+[  4] t=      1.5ms DeviceIoControl  site=0x71 ret=1
+        buf@0x01410D10(4B) @0x12a: 83 00 00 D8   <-- CMD 0x83 INFO
+[  5] t=      1.5ms DeviceIoControl  site=0x71 ret=1
+        buf@0x01411DAE(22B) @0x12a: 00 12 00 67 88 17 11 0A 00 00 00 00 00 00 00 00 98 11 00 00 02 03   <-- RESP status=12 len=0x00
+[  6] t=      1.5ms DeviceIoControl  site=0x71 ret=1
+        buf@0x01410D10(4B) @0x12a: 88 00 00 DD   <-- CMD 0x88 ARM
+[  7] t=      1.5ms DeviceIoControl  site=0x71 ret=1
+        buf@0x01411DAE(4B) @0x12a: 00 00 00 55   <-- RESP status=00 len=0x00
+[  8] t=      1.5ms DeviceIoControl  site=0x71 ret=1
+        buf@0x01410D10(16B) @0x12a: 37 0C 00 98 98 11 00 00 13 9A 0E 21 3C 35 01 00   <-- CMD 0x37 LAUNCH
+[  9] t=      1.5ms DeviceIoControl  site=0x71 ret=1
+        buf@0x01411DAE(4B) @0x12a: 00 00 00 55   <-- RESP status=00 len=0x00
+[ 10] t=     11.8ms DeviceIoControl  site=0x71 ret=1
+        buf@0x01410D10(176B) @0x12a: 12 AC 00 13 26 97 D7 0C FE F3 ED 2B D5 FC E5 35 1F 4A 92 39 6B 69 E1 03 B5 A4 8B 1B 30 68 F1 24 C4 6C C6 12 E1 A9 D1 04 B9 25 C9 0A 58 CB CE 3A 37 E6 8E 67 2A E5 35 03 0F 9B 45 20 36 2F AF 19…   <-- CMD 0x12 AUTH
+[ 11] t=     12.3ms DeviceIoControl  site=0x71 ret=1
+        buf@0x01411DAE(4B) @0x12a: 01 00 00 56
