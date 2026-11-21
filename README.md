@@ -28,6 +28,26 @@
 ошибку **[0007] Внутренняя ошибка микропрограммы адаптера (FLASH/MCU)**,
 возникающую с первой версией образа — см. `docs/ERROR_0007_ANALYSIS.md`.
 
+### Статус: найдено, почему SWD «умирает» — бутлоадер отключает его на LAUNCH
+
+Разбор причины всех сбоев живого подключения ("Failed to initialize DAP",
+"Could not read memory", "CPU is not halted") — реверс
+`scripts/scan_debug_block2.py`, подробности в **`docs/JLINK_OB_GUIDE.md`
+раздел 3а**:
+
+* единственная во всей прошивке запись SWJ_CFG (AFIO_MAPR, «JTAG+SWD
+  выключены») — функция 0x08000E14, вызываемая ТОЛЬКО из блока запуска
+  приложения (команда 0x37 LAUNCH, bl на 0x0800133C). В простое бутлоадера
+  SWD жив; после LAUNCH — мёртв всегда. Это объясняет и «флейк» DAP в
+  логах дампов A/B (оба сняты в пост-LAUNCH состоянии, спас connect
+  under reset), и неудачу прогона с ловушкой на 0x0800C15C;
+* собран образ **`firmware/SM2Pro_full_flash_2.22.3_patched_v2_SWDON.bin`**
+  (v6): тот же patched_v2, но SWJ_CFG меняется на 010 — **SWD остаётся
+  включённым после LAUNCH** (4 байта @0x0800E1C, сборщик
+  `scripts/new_dist/build_v6_swd_keep.py`). Бонус-прогон (брейкпоинты на
+  входе крипто-ядра 0x0800C15C и возврате 0x08007292, замер времени,
+  дамп середины VM) теперь выполним.
+
 ### Статус: дампы зависания сняты и разобраны — диагноз уточнён до механизма
 
 Прогоны A (patched_v2) и B (AUTH_BYPASS) сняты через J-Link OB с полным дампом
@@ -61,7 +81,10 @@ RAM 64 КБ каждый (разбор — **`docs/HANGDUMPS_ANALYSIS.md`**, с�
 
 **Предыдущая стадия (лестница тестов, для истории):** PROBE (стаб-резидент — транспорт идеален, «00000» = реакция ПК на невалидный AUTH), AUTH_BYPASS (приложение живо и отвечает), MODE1 (поколение платы не при чём) — таблица и захваты в `docs/APIMON3_LADDER_ANALYSIS.md`, `captures/apimon3_ladder/`.
 
-**Следующий шаг — бонус-прогон с брейкпоинтами** (`docs/JLINK_OB_GUIDE.md`, раздел 6): измерить время работы ядра, зафиксировать возвращаемое значение и снять середину VM.
+**Следующий шаг — бонус-прогон с брейкпоинтами** (`docs/JLINK_OB_GUIDE.md`,
+раздел 6): прошить **SWDON-образ** (в обычном patched_v2 SWD умирает на
+LAUNCH — ловушки невозможны), измерить время работы ядра, зафиксировать
+возвращаемое значение и снять середину VM.
 
 #### Прошлая стадия (захват №2, для истории)
 
@@ -94,6 +117,8 @@ RAM 64 КБ каждый (разбор — **`docs/HANGDUMPS_ANALYSIS.md`**, с�
 рабочая пара «прошивка+ПО».
 
 Альтернативы:
+* `SM2Pro_full_flash_2.22.3_patched_v2_SWDON.bin` — patched_v2 + SWD остаётся
+  включённым после LAUNCH (для отладки по J-Link; поведение прибора то же);
 * `SM2Pro_full_flash_2.22.3_official_v2.bin` — «как настоящий прибор»
   (приложение без патча UID, EEPROM исправлен);
 * `SM2Pro_full_flash_2.22.3_patched_v2_slots_only.bin` — патч клона, исправлены
@@ -190,6 +215,10 @@ SM2Pro_full_flash_2.22.3_official_v2.bin
 SM2Pro_full_flash_2.22.3_patched_v2_slots_only.bin
   MD5:    4c42871b69ca9c30ae293d82739f1ad5
   SHA256: 11cc51386eae69eaa6922f544b7b65df2abef2531afa13c842be2c2b709b6dcf
+
+SM2Pro_full_flash_2.22.3_patched_v2_SWDON.bin      (v6: SWD жив после LAUNCH — для отладки)
+  MD5:    25d162dcb8f4ae74c85ae2ac339d69f4
+  SHA256: 41d4ec2fae620b37feeacca13737fa06fa2ec3e5c0093efbba554c73dbd2285c
 
 SM2Pro_full_flash_2.22.3_PROBE_stub_resident.bin   (ГЛАВНЫЙ ДИАГНОСТИЧЕСКИЙ ТЕСТ)
   MD5:    555c9d9cd2568626ad6bb204da4b1d52
@@ -318,6 +347,10 @@ SM2_2.21.32_A111788_STM32F105VCT6.bin   (исходный битый/донор�
   PROBE (стаб-резидент) и MODE1 (режим платы 1) с самопроверкой байтов;
 * `scripts/new_dist/build_v5_auth_bypass.py` — сборка AUTH_BYPASS (обход
   крипто-ядра 0x0800C15C в обработчике AUTH), сверяет MD5/SHA256 с эталоном;
+* `scripts/new_dist/build_v6_swd_keep.py` — сборка SWDON (v6: SWJ_CFG 100→010,
+  SWD не отключается на LAUNCH), сверяет байты базы с эталоном;
+* `scripts/scan_debug_block2.py` — сканер блокировки отладки (AFIO_MAPR/
+  SWJ_CFG, DBGMCU, FPB, PWR/сон, option bytes, WFI/WFE) по образам;
 * `scripts/new_dist/dis_crypto_core.py` — дизассемблер/анализ крипто-ядра
   0x0800C15C (svc, периферия, циклы VM);
 * `scripts/new_dist/dis_deep.py` — глубокий дизассемблер sm2lib.dll 2.22.3
